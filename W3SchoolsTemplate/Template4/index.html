@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3Template4</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Karma:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+    :root {
+        --main-color: #d3cdcd;
+        --bg-color: #fff;
+        --text-color: black;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #3d3b3b;
+        font-family: 'Karma', sans-serif;
+    }
+
+    header {
+        background-color: var(--bg-color);
+        height: 60px;
+        top: 0px;
+        position: sticky;
+        display: flex;
+        font-size: large;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid var(--main-color);
+    }
+
+    header>div {
+        padding: 20px;
+    }
+
+    header>label {
+        /* background-color: var(--main-color); */
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    .sidebar {
+        cursor: pointer;
+        display: none;
+       
+        top: 0px;
+        position: absolute;
+        width: 150px;
+        background-color: var(--main-color);
+        height: 100vh;
+    }
+
+    .sidebar>p {
+        padding: 20px;
+    }
+    .sidebar>label{
+        cursor: pointer;
+    }
+    .sidebar>input {
+        padding: 20px;
+    }
+    
+    #check:checked+.sidebar {
+        display: block;
+        left: 0px;
+        
+        transition: all 0.3s ease;
+    }
+
+    .img-container {
+        width: auto;
+        height: 1100px;
+        display: grid;
+        margin: 10px 40px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        gap: 20px;
+        grid-template-areas: "img1 img2 img3 img4"
+            "img1 img2 img3 img4"
+            "img1 img2 img3 img4"
+            "img1 img2 img3 img4"
+            "img5 img6 img7 img8"
+            "img5 img6 img7 img8"
+            "img5 img6 img7 img8"
+            "img5 img6 img7 img8";
+    }
+
+    .img1 {
+        grid-area: img1;
+    }
+
+    .img2 {
+        grid-area: img2;
+    }
+
+    .img3 {
+        grid-area: img3;
+    }
+
+    .img4 {
+        grid-area: img4;
+    }
+
+    .img5 {
+        grid-area: img5;
+    }
+
+    .img6 {
+        grid-area: img6;
+    }
+
+    .img7 {
+        grid-area: img7;
+    }
+
+    .img8 {
+        grid-area: img8;
+    }
+
+    .img-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .numbers {
+        margin: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 1px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid var(--main-color);
+    }
+
+    .numbers>div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+    }
+
+    .numbers>div:hover {
+        background-color: #000;
+        color: var(--bg-color);
+    }
+
+    .aboutsection-img {
+        width: 60%;
+        margin: auto;
+        height: 100%;
+    }
+
+    .aboutsection-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 80%;
+        gap: 15px;
+        margin: auto;
+        padding-bottom: 20px;
+
+    }
+
+    footer {
+        border-top: 1px solid var(--main-color);
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1f 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "foot blogpost tags "
+            "foot blogpost tags "
+            "foot blogpost tags ";
+
+        gap: 10px;
+        justify-content: space-around;
+
+    }
+
+    footer>div {
+        max-width: 400px;
+    }
+
+    .blogpost1,
+    .blogpost2 {
+        padding: 12px;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .blogpost1:hover {
+        background-color: var(--main-color);
+    }
+
+    .blogpost2:hover {
+        background-color: var(--main-color);
+    }
+    .tags>div:first-of-type{
+        font-size: 16px;
+        background-color: #000;
+
+    }
+    .tags>div {
+        display: inline-block;
+        flex-direction: row;
+        margin: 3px;
+        padding: 0px 5px;
+        background-color: #747474;
+        color: #fff;
+        font-size: small;
+    }
+
+    @media (max-width:768px) {
+        .img-container {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        footer>div {
+            height: auto;
+            width: 80vw;
+            margin: auto;
+        }
+
+    }
+</style>
+
+<body>
+    <header>
+        <label for="check">&#9776;</label>
+        <p>My Food</p>
+        <p>Mail</p>
+        <input type="checkbox" id="check">
+
+        <div class="sidebar">
+            <label for="check" class="close-btn">CLOSE</label><br><br>
+            <label >FOOD</label> <br><br>
+            <label >ABOUT</label>
+        </div>
+         
+    </header>
+    <div class="img-container">
+
+        <div>
+            <div class="img1">
+                <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+            <div class="img-content">
+                <h4>Chicken Dum Biryani (Special)</h4>
+                <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+        </div>
+        <div>
+            <div class="img2">
+                <img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aW5kaWFuJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D" alt="">
+            </div>
+            <div class="img-content">
+                <h4>Let Me Tell You About GajarKaHalwa</h4>
+                <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="img3">
+                <img src="https://www.spiceupthecurry.com/wp-content/uploads/2016/07/vada-pav-2.jpg" alt="">
+            </div>
+            <div class="img-content">
+                <h4>VadaPaav (Mumbai Style)</h4>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                <p>What else?</p>
+            </div>
+        </div>
+        <div>
+            <div class="img4">
+                <img src="https://www.w3schools.com/w3images/wine.jpg" alt="">
+            </div>
+            <div class="img-content">
+                <h4>Once Again, Robust Wine and Vegetable Pasta</h4>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+        </div>
+        <div>
+            <div class="img5">
+                <img src="https://www.w3schools.com/w3images/popsicle.jpg" alt="">
+            </div>
+            <div class="img-content">
+                <h4>All I Need Is a Popsicle</h4>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+        </div>
+        <div>
+            <div class="img6">
+                <img src="https://i0.wp.com/www.happyandharried.com/wp-content/uploads/2018/04/CRISP-PAPER-ROAST-DOSAS-HAPPYHARRIED.jpg" alt="">
+            </div>
+            <div class="img-content">
+                <h4>Masala Dosa (Street Style)</h4>
+                <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="img7">
+                <img src="https://img.freepik.com/free-photo/high-angle-triangle-sandwiches-with-tomatoes_23-2148640141.jpg?semt=ais_hybrid&w=740" alt="">
+            </div>
+            <div class="img-content">
+                <h4>The Perfect Sandwich, A Real Classic</h4>
+                <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+        </div>
+        <div>
+            <div class="img8">
+                <img src="https://www.w3schools.com/w3images/croissant.jpg" alt="">
+            </div>
+            <div class="img-content">
+                <h4>Le French</h4>
+                <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="numbers">
+        <div>&laquo;</div>
+        <div style="background-color: #000;color: #fff;">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>&raquo;</div>
+    </div>
+
+    <div class="about-section">
+        <h2 style="text-align: center;font-weight: 500;margin-bottom: 30px;">About Me, The Food Man</h2>
+        <div class="aboutsection-img">
+            <img height="100%" width="100%" src="./IMG_20250420_095950.jpg" alt="about-img">
+        </div>
+        <div class="aboutsection-content">
+            <h4>I am Aslam</h4>
+            <p style="font-style: italic;">With Passion For Real, Good Food</p>
+            <p> Welcome to our flavorful food blog dedicated to celebrating the rich and diverse world of Indian cuisine! 
+                From the royal biryanis of Hyderabad to the sweet delights of India and the spicy flavors of South India, 
+                we bring you a handpicked collection of mouth-watering dishes. Whether you're a foodie, a home cook, or 
+                just exploring Indian flavors, you're in the right place!</p>
+        </div>
+    </div>
+    <footer>
+        <div class="foot">
+            <h2>FOOTER</h2>
+            <p>Every dish is a celebration of tradition, 
+                taste, and regional flavors.</p> 
+            <p>&copy; 2025 Foodie Vibes | Made with &hearts; for Indian food lovers
+                 Contact: hello@foodievibes.in
+            </p> <br>
+            <p>Powered by Aslam.Foodie</p>
+        </div>
+        <div class="blogposts">
+            <h2>EXPLORE FOODS</h2>
+            <div class="blogpost1">
+                <img src="https://media.istockphoto.com/id/639389404/photo/authentic-indian-food.jpg?s=612x612&w=0&k=20&c=gbfAu17L1gtHmuo5biByhfCefAtYUtGQpyxMmi9_Mus=" height="50px" width="50px" alt="post1">
+                <div class="blogpost1-content">
+                    <h4>Hyderabad Special</h4>
+                    <p>Foods</p>
+                </div>
+
+            </div>
+            <div class="blogpost2">
+                <img src="https://i.pinimg.com/736x/3e/16/de/3e16de32d011d3a95b40af87310b766c.jpg" height="50px" width="50px" alt="post2">
+                <div class="blogpost2-content">
+                    <h4>South Indian Foods</h4>
+                    <p>Special Recipes</p>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="tags">
+            <h2>POPULAR TAGS</h2>
+
+            <div>Food</div>
+            <div>Chicken</div>
+            <div>IceCream</div>
+            <div>Dinner</div>
+            <div>Hyderabadi</div>
+            <div>Fish</div>
+            <div>Flavors</div>
+            <div>Cuisine</div>
+            <div>Cook</div>
+            <div>Burger</div>
+            <div>Biryani</div>
+            <div>Halwa</div>
+            <div>Foodie</div>
+            <div>Dosa</div>
+            <div>South India</div>
+            <div>Idli</div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

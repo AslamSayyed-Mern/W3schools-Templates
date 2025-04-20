@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS Task | Aslam</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .sidebar{
+            padding: 10px 0px 10px 0px;
+            display: flex;
+            position: fixed;
+            justify-content: space-between;
+            background-color: rgba(204, 204, 204,0.4);
+        }
+    
+        .sidebar p{
+            margin: 10px;
+            display: inline-block;
+        }
+        #menu-icon{
+            margin-left: 1045px;
+            color: black;
+            text-decoration: none;
+            font-size: 25px;
+            padding: 2px;
+
+        }
+        #menu-icon:hover{
+            background-color: #ccc;
+        }
+        #heading{
+            margin: 20px;
+            font-weight: 900;
+            font-size: large;
+
+        }
+        .gallary{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+           
+        }
+        img{
+            width: 314px;  
+            height: 400px;     
+            
+        }
+        img:hover{
+            filter: opacity(0.7);
+            cursor: pointer;
+
+        }
+        .navigation{
+            display: flex;
+            justify-content: center;
+        }
+        #nav-numbers{
+            margin: 10px 5px;
+            padding: 10px;
+            text-decoration: none;
+           
+        }
+        #nav-numbers:hover{
+            background-color: rgb(70, 63, 63);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+         <nav>
+            <span id="heading">ASLAM SAYYED</span>
+            <a id="menu-icon" href="#">&#9776;</a>
+        </nav>
+        </div>
+    <div class="gallary">
+        <img src="https://www.w3schools.com/w3images/girl.jpg" alt="images">
+        <img src="https://www.w3schools.com/w3images/girl_train.jpg" alt="images">
+        <img src="https://www.w3schools.com/w3images/man_bench.jpg" alt="images">
+        <img src="https://www.w3schools.com/w3images/man_bench.jpg" alt="images">
+        <img src="https://www.w3schools.com/w3images/boy.jpg" alt="images">
+        <img src="https://www.w3schools.com/w3images/man_bench.jpg" alt="images">
+        <img src="https://www.w3schools.com/w3images/girl_mountain.jpg" alt="images">
+        <img src="https://www.w3schools.com/w3images/girl_train.jpg" alt="images">
+        <img src="https://www.w3schools.com/w3images/girl.jpg" alt="images">
+        <img src="https://www.w3schools.com/w3images/natureboy.jpg" alt="images">
+        <img src="https://www.w3schools.com/w3images/closegirl.jpg" alt="images">
+        <img src="https://www.w3schools.com/w3images/boy.jpg" alt="images">
+    </div>
+    <div class="navigation">
+        <a id="nav-numbers" href="">&laquo;</a>
+        <a id="nav-numbers" href="">1</a>
+        <a id="nav-numbers"  href="">2</a>
+        <a id="nav-numbers" href="">3</a>
+        <a id="nav-numbers" href="">4</a>
+        <a id="nav-numbers" href="">5</a>
+        <a id="nav-numbers" href="">&raquo;</a>
+    </div>
+</body>
+</html>

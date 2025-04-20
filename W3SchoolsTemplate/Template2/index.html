@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3Templateby-Aslam</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway',sans-serif;
+
+        }
+        body{
+            background-color: rgba(204, 204, 204,0.4);
+        }
+        .main-container{
+            display: grid;
+            /* gap: 10px; */
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(8,1fr);
+            grid-template-areas: "blog1 blog1 aside"
+                                 "blog1 blog1 aside"
+                                 "blog1 blog1 aside"
+                                 "blog1 blog1 aside2"
+                                 "blog2 blog2 aside2"
+                                 "blog2 blog2 aside2"
+                                 "blog2 blog2 aside3"
+                                 "blog2 blog2 aside3";
+        }
+        .blog1{
+            grid-area: blog1;
+        }
+        .blog2{
+            grid-area: blog2;
+        }
+        .blog3{
+            grid-area: aside;
+
+        }
+        .blog4{
+            grid-area: aside2;
+            
+        }
+        .blog5{
+            grid-area: aside3;
+
+        }
+        .header-main{
+            text-align: center;
+            margin: 50px;  
+        }
+        .header-main p{
+            margin-top: 20px;
+            
+        }
+        .spanstyle-1{
+            background-color: #000;
+            color: #fff;
+            padding:3px;
+           
+        }
+        .blog{
+            width: auto;
+            height: auto;
+            margin: 10px;
+            border:1px solid #ccc ;    
+            background-color: #fff;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0,0.5) ;
+        }
+        .blog-img>img{
+            width:100% ;
+            object-fit: cover;
+        }
+        .blog-content{
+            margin: 10px;
+            line-height: 1.4;
+            display: flex;
+            flex-direction: column;
+            gap:15px;
+        }
+        .spanstyle-2{
+            opacity: 0.6;
+        }
+        .blog-bottom{
+            display: flex;
+            justify-content: space-between;
+        }
+        .blog-bottom>button{
+            padding: 12px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+        .blog-bottom>button:hover{
+            background-color: rgba(204, 204, 204,0.5);
+        }
+        .content4{
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+
+        }
+  
+        .content4>img{
+            height: 50px;
+            width: 50px;
+        }
+        .blog4>div:hover{
+            background-color: rgba(204, 204, 204,0.4);
+
+        }
+        .div1{
+            padding: 20px;
+            background-color: rgba(204, 204, 204,0.4);
+        }
+        .section1{
+            background-color: rgba(204, 204, 204,0.4);
+            padding: 15px;
+        }
+        .section2{
+            margin: 10px;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        .content5>span{
+            background-color: rgba(204, 204, 204,0.4);
+            padding: 2px;
+            margin: 3px;
+        }
+        footer{
+            background-color: rgb(137, 133, 133);
+            padding: 30px;
+            color: #fff;
+        }
+        footer>button{
+            margin: 10px 0px;
+            padding: 10px 15px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            background-color: #000;
+        }
+        footer a{
+            color: #fff;
+        }
+        @media (max-width:768px) {
+            .main-container{
+                display: flex;
+                flex-direction: column;
+            }
+            
+        }
+    </style>
+</head>
+
+    <header class="header-main"> 
+        <h1><b>MY BLOG</b></h1>
+        <p>Welcome to the blog of <span class="spanstyle-1"> Aslam</span></p>
+    </header>
+    <div class="main-container">
+    <div class="blog blog1">
+        <div class="blog-img blog1-img">
+            <img src="https://t4.ftcdn.net/jpg/11/82/55/57/360_F_1182555729_VX9T9O2vZxUrsNJn95vXkIWFUulgsJCj.jpg" height="250px" style="object-fit: cover;" alt="nature">
+        </div>    
+            <div class="blog-content content1">
+                <h3><b>Nature Photography</b></h3>
+            <h4>Title description, 
+                <span class="spanstyle-2">Clicked On November 23, 2024
+                </span></h4>
+                <p>
+                    Nature has a way of speaking to us without using words — through colors, textures, and quiet stillness. This photograph is one of those moments where the world felt perfectly in sync, and I was lucky enough to capture it. A gentle breeze, soft sunlight, and the sound of rustling leaves made it feel like time had paused for a second.
+                    Through my lens, I tried to frame more than just a view — I wanted to capture a feeling. Whether it's the way the light hit the leaves or how the sky melted into the horizon, each detail tells its own story. It's not just a picture; it's a memory of peace, clarity, and connection with the world around me.
+                </p>
+            
+            <div class="blog-bottom bottom1">
+                <button><b>READ MORE &raquo;</b></button>
+                <p>Comments &nbsp; <span class="spanstyle-1">0</span></p>
+        </div>
+    </div>
+</div>
+    <div class="blog blog2">
+        <div class="blog-img  blog2-img">
+            <img src="https://images.unsplash.com/photo-1622256013878-8df3b62e61ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="object-fit: cover; " height="250px" alt="Sunset">
+        </div>    
+            <div class="blog-content content2">
+                <h3><b>Sunset</b></h3>
+            <h4>Title description, 
+                <span class="spanstyle-2">Clicked On April 1, 2025
+                </span></h4>
+                <p>
+                    Photography, to me, is more than a hobby. It's a way to see life differently — to appreciate the little things we often rush past. Nature has always inspired me, not just for its beauty but for its silence and simplicity. This shot reminds me why I love being behind the camera.
+
+                    Every time I look at this photo, I'm reminded of how vast and beautiful the world is. No filters, no edits — just raw, honest nature in its purest form. Sometimes, the most powerful moments are the quietest ones.
+
+                    I hope this image brings you a moment of calm too — a reminder to slow down, breathe, and take in the world around you. Because sometimes, the most beautiful scenes are the ones waiting just outside our door.
+                </p>
+            
+            <div class="blog-bottom bottom2">
+                <button><b>READ MORE &raquo;</b></button>
+                <p>Comments &nbsp; <span class="spanstyle-1">2</span></p>
+        </div>
+    </div>
+
+    </div>
+    <div class="blog blog3"> 
+        <div class="blog-img  blog3-img">
+            <img src="./Aslam_ghibli_landscape.jpeg" height="200px" alt="Aslam_ghibli" style="object-fit: cover;">
+        </div>    
+            <div class="blog-content content3">
+                <h3><b>My Name is </b><span class="spanstyle-1">Aslam</span></h3>
+            
+                <p>
+                    Just me, myself, and I — wandering through the universe of the unknown. With a heart full of wonder and a mind curious about all things beautiful and strange. From quiet thoughts to loud dreams, this is my space to share pieces of my world with you.
+                </p>
+    </div>
+
+</div>
+
+    <div class="blog blog4">
+        <div class="content4 div1">
+            <h3>Popular Posts</h3>
+
+        </div>
+        <div class="content4 div2"><img src="https://images.pexels.com/photos/1083502/pexels-photo-1083502.jpeg?cs=srgb&dl=pexels-itfeelslikefilm-1083502.jpg&fm=jpg" alt="content4-img"> 
+        <div class="summary summary1">
+            <h3> Animals
+            </h3>
+        <h4> Roaming in Nature</h4>
+        </div></div>
+
+        <div class="content4 div3"><img src="https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/db60542f-3e14-4ffb-ac03-04a3a525410f/ear.jpg" alt="content4-img"> <div class="summary summary1">
+            <h3> Bird
+            </h3>
+        <h4> Sitting on Tree </h4>
+        </div>
+    </div>
+        <div class="content4 div4"><img src="https://www.w3schools.com/w3images/skies.jpg" alt="content4-img"> <div class="summary summary1">
+            <h3> Nature 
+            </h3>
+        <h4> Cool Foggy Weather</h4>
+        </div></div>
+        <div class="content4 div5"><img src="https://www.w3schools.com/w3images/rock.jpg" alt="content4-img"> <div class="summary summary1">
+            <h3> Mountains
+            </h3>
+        <h4> Pictures</h4>
+    </div>
+    </div>
+</div>
+
+<div class="blog blog5">
+    <div class="content5 section1">
+        <h3>Tags</h3></div>
+    <div class="content5 section2">
+        <span>Travel </span>
+        <span>Photography </span>
+        <span>Nature </span>
+        <span>India</span>
+        <span> Photos </span>
+        <span>Plants </span>
+        <span>Ideas </span>
+        <span>Editing </span>
+        <span>Sunrise</span>
+        <span>Focus </span>
+        <span>Clothing </span>
+        <span>Outdoor </span>
+        <span>Trees</span>
+        <span>Sunset </span>
+    </div>
+</div>
+      
+</div>
+
+<footer>
+    <button disabled>Previous </button>
+    <button>Next  &raquo;</button>
+    <p>Powerd by <a href="#">Aslam.Photography</a></p>
+</footer>
+
+    
+    
+
+    
+</body>
+</html>
